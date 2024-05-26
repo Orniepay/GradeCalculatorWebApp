@@ -20,7 +20,7 @@ APP.get("/", function(req, res)
     res.sendFile(PATH.join(__dirname, '/index.html'));
 });
 
-// APP.listen(PORT, function()
-// {
-//     console.log('Listening on port: ${PORT}'); 
-// });
+APP.listen(PORT, function()
+{
+    console.log('Listening on port: ${PORT}'); 
+});

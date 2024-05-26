@@ -1,4 +1,24 @@
-.navbar {
+body {
+    background: url(background.jpg) no-repeat center; 
+    color: white; 
+  }
+  
+  .container {
+    background-color: white; 
+    color: black;
+    padding: 20px;
+    margin-top: 20px; 
+    border-radius: 8px; 
+  }
+  
+  
+  input[type="text"] {
+    background-color: #f8fafc; 
+    border: 1px solid #ccc; 
+    color: #495057; 
+  }
+  
+  .navbar {
     background-color: #fff;
     height: 80px; 
     margin: 20px;
@@ -74,7 +94,8 @@
     height: 100vh;
 }
 
-.hero-section::before {
+/* Shades out background image */
+/* .hero-section::before {
     background-color: rgba(0, 0, 0, 0.6);
     content: "";
     position: absolute;
@@ -82,4 +103,4 @@
     right: 0; 
     bottom: 0;
     left: 0;
-}
+} */
