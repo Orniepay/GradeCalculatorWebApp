@@ -65,7 +65,7 @@
       </div>
     </div>
 
-    <form>
+    <form id="grade-form">
       <div class="row mb-3">
         <div class="col-4">
           <input type="text" class="form-control" placeholder="e.g Assignment" />
@@ -137,16 +137,37 @@
           <input type="text" class="form-control" placeholder="Weight" />
         </div>
       </div>
-
     </form>
-  </div>
-  <!-- Grade Calculator Section -->
 
-  <!-- Add Button Section -->
-  <div class="d-grid gap-2">
-    <button class="btn btn-primary" type="button" id="addRowButton">Add Row</button>
-  </div>
+    <!-- Add Row Button Section -->
+    <br />
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button class="btn btn-primary" type="button" id="addRowButton">
+        Add Row
+      </button>
+    </div>
+    <br />
+    <!-- End Add Row Button Section -->
 
+    <!-- Calculate Button -->
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button id="calculate-button" type="button" class="btn btn-success">
+        Calculate
+      </button>
+    </div>
+    <!-- End Calculate Button -->
+
+    <!-- Reset Button -->
+    <br />
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button type="button" class="btn btn-secondary">Reset</button>
+    </div>
+    <!-- End Reset Button-->
+
+  </div>
+  <!-- End Grade Calculator Section -->
+
+  <!-- Add Button Functionality Section -->
   <script>
     document
       .getElementById("addRowButton")
@@ -157,12 +178,14 @@
         form.appendChild(newRow); // Append the new row to the form
       });
   </script>
-  <!-- End Add Button Section -->
+  <!-- End Add Button Functionality Section -->
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
