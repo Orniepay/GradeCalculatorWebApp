@@ -191,14 +191,19 @@
 
   <!-- Add Button Functionality Section -->
   <script>
-    document
-      .getElementById("addRowButton")
-      .addEventListener("click", function () {
-        var form = document.querySelector("#input-area form"); // Select the form inside the input-area
-        var fourthRow = form.children[5]; // Get the fourth row of inputs
-        var newRow = fourthRow.cloneNode(true); // Clone the fourth row of inputs
-        form.appendChild(newRow); // Append the new row to the form
-      });
+    document.getElementById("addRowButton").addEventListener("click", function() {
+      var form = document.querySelector("#input-area form"); // Select the form
+      var templateRow = form.children[5]; // Reference the template row (fourth row)
+      var newRow = templateRow.cloneNode(true); // Clone the template row
+  
+      // Clear all input fields in the cloned row
+      var inputs = newRow.getElementsByTagName('input');
+      for (var i = 0; i < inputs.length; i++) {
+        inputs[i].value = ''; // Set the value of each input field to an empty string
+      }
+  
+      form.appendChild(newRow); // Append the new, cleared row to the form
+    });
   </script>
   <!-- End Add Button Functionality Section -->
 
