@@ -104,3 +104,24 @@ body {
     bottom: 0;
     left: 0;
 } */
+
+.card {
+    background-color: #ffffff;
+    border: none; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+
+.card-body {
+    padding: 20px; 
+}
+
+#average-grade {
+    font-size: 24px; 
+    color: #333; 
+    font-weight: bold; 
+}
+
+#average-grade-value {
+    color: #4CAF50; 
+}
+
