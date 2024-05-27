@@ -71,10 +71,12 @@
           <input type="text" class="form-control" placeholder="e.g Assignment" />
         </div>
         <div class="col-4">
-          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade (%)" min="0"/>
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade (%)"
+            min="0" />
         </div>
         <div class="col-4">
-          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Weight" min="0"/>
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Weight"
+            min="0" />
         </div>
       </div>
 
@@ -83,10 +85,12 @@
           <input type="text" class="form-control" placeholder="e.g Homework" />
         </div>
         <div class="col-4">
-          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade (%)" min="0"/>
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade (%)"
+            min="0" />
         </div>
         <div class="col-4">
-          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Weight" min="0"/>
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Weight"
+            min="0" />
         </div>
       </div>
 
@@ -95,22 +99,12 @@
           <input type="text" class="form-control" placeholder="e.g Exam" />
         </div>
         <div class="col-4">
-          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade (%)" min="0"/>
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade (%)"
+            min="0" />
         </div>
         <div class="col-4">
-          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Weight" min="0"/>
-        </div>
-      </div>
-
-      <div class="row mb-3">
-        <div class="col-4">
-          <input type="text" class="form-control" placeholder="" />
-        </div>
-        <div class="col-4">
-          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade (%)" min="0"/>
-        </div>
-        <div class="col-4">
-          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Weight" min="0"/>
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Weight"
+            min="0" />
         </div>
       </div>
 
@@ -119,10 +113,12 @@
           <input type="text" class="form-control" placeholder="" />
         </div>
         <div class="col-4">
-          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade (%)" min="0" />
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade (%)"
+            min="0" />
         </div>
         <div class="col-4">
-          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Weight" min="0"/>
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Weight"
+            min="0" />
         </div>
       </div>
 
@@ -131,10 +127,26 @@
           <input type="text" class="form-control" placeholder="" />
         </div>
         <div class="col-4">
-          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade (%)" min="0"/>
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade (%)"
+            min="0" />
         </div>
         <div class="col-4">
-          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Weight" min="0"/>
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Weight"
+            min="0" />
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-4">
+          <input type="text" class="form-control" placeholder="" />
+        </div>
+        <div class="col-4">
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade (%)"
+            min="0" />
+        </div>
+        <div class="col-4">
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Weight"
+            min="0" />
         </div>
       </div>
     </form>
@@ -147,6 +159,13 @@
     <br />
     <!-- End Add Row Button Section -->
 
+    <!-- Reset Button -->
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button type="button" class="btn btn-secondary" id="reset-button">Reset</button>
+    </div>
+    <br />
+    <!-- End Reset Button-->
+
     <!-- Calculate Button -->
     <div class="d-grid gap-2 col-6 mx-auto">
       <button id="calculate-button" type="button" class="btn btn-success">
@@ -155,12 +174,15 @@
     </div>
     <!-- End Calculate Button -->
 
-    <!-- Reset Button -->
-    <br />
-    <div class="d-grid gap-2 col-6 mx-auto">
-      <button type="button" class="btn btn-secondary" id="reset-button">Reset</button>
+    <!-- Average Grade Calculated Section -->
+    <div class="container mt-5">
+      <div class="card">
+        <div class="card-body">
+          <p class="mb-0"><strong>Average Grade:</strong> F+</p>
+        </div>
+      </div>
     </div>
-    <!-- End Reset Button-->
+    <!-- End Average Grade Calculated Section -->
 
   </div>
   <!-- End Grade Calculator Section -->
