@@ -10,11 +10,6 @@ function App() {
 
 export default App
 
-
-
-
-
-
 // Commented Boilerplate Code : //
 
 // import logo from './logo.svg';

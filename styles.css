@@ -137,7 +137,14 @@ body {
     font-weight: bold;
     font-weight: bold;
 }
+#average-grade-value {
+    color: green;
+}
 
 #average-grade-value p {
-    color: #4CAF50; 
+    color: #28a745; 
+}
+
+.average-grade-value p {
+    color: #28a745; 
 }

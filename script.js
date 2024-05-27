@@ -1,5 +1,6 @@
 function calculate_grades()
 {
+
     //This is the form on the page where the user can input their assignment name, grades, and weights.
     const FORM = document.getElementById("grade-form");
     //This will track if there are any grades inputted.
@@ -43,7 +44,17 @@ function calculate_grades()
     var average_grade_display = document.getElementById("average-grade");
     //Whenever the user clicks the Calculate button, we'll reset the text and then append the calculated grade.
     average_grade_display.innerHTML = '<strong>Average Grade: </strong>';
+    var average_grade_value = document.getElementById("average-grade-value");
     average_grade_display.innerHTML += average;
+
+    // Set the color based on the average grade value
+    if (average >= 80) {
+        average_grade_display.style.color = "green"; 
+    } else if (average >= 65) {
+        average_grade_display.style.color = "orange"; 
+    } else {
+        average_grade_display.style.color = "red"; 
+    }
 }
 
 document.getElementById("calculate-button").onclick = function()
