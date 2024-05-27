@@ -27,3 +27,13 @@ document.getElementById("calculate-button").onclick = function()
     //console.log("ratio");
     read_grades();
 };
+
+function only_allow_numbers(event)
+{
+    //This function makes it so a text-box will only allow numbers to be entered in.
+    var ascii_code = event.which ? event.which : event.keyCode;
+    //We'll allow the '.' for decimal percentages.
+    if(ascii_code == 0x2E) return true;
+    if(ascii_code > 0x1F && (ascii_code < 0x30 || ascii_code > 0x39)) return false;
+    return true;
+}
