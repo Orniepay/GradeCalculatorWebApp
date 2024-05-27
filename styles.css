@@ -115,11 +115,19 @@ body {
     margin: 0;
 }
 
+.card-body p {
+    margin: 0;
+}
+
 .card-body {
     display: flex;
     justify-content: center;
     align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px; 
+    height: 70px;
     height: 70px;
 }
 
@@ -129,8 +137,10 @@ body {
     font-size: 24px; 
     color: #333; 
     font-weight: bold;
+    font-weight: bold;
 }
 
+#average-grade-value p {
 #average-grade-value p {
     color: #4CAF50; 
 }
