@@ -179,7 +179,8 @@
       <div class="container mt-5" style="max-width: 80%; margin: auto;">
         <div class="card">
           <div class="card-body">
-            <p id="average-grade" class="mb-0"><strong>AVERAGE GRADE :</strong> <span id="average-grade-value"></span></p>
+            <p id="average-grade" class="mb-0"><strong>AVERAGE GRADE :</strong> <span id="average-grade-value"></span>
+            </p>
           </div>
         </div>
       </div>
@@ -191,11 +192,11 @@
 
   <!-- Add Button Functionality Section -->
   <script>
-    document.getElementById("addRowButton").addEventListener("click", function() {
+    document.getElementById("addRowButton").addEventListener("click", function () {
       var form = document.querySelector("#input-area form"); // Select the form
       var templateRow = form.children[5]; // Reference the template row (fourth row)
       var newRow = templateRow.cloneNode(true); // Clone the template row
-  
+
       // Clear all input fields in the cloned row
       var inputs = newRow.getElementsByTagName('input');
       for (var i = 0; i < inputs.length; i++) {

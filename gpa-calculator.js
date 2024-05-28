@@ -75,6 +75,7 @@ function calculate_gpa()
     average_gpa_display.innerHTML += Math.round((gpa / credits_taken) * 1000) / 1000;
 }
 
+
 document.getElementById("calculate-button-gpa").onclick = function()
 {   
     //When the user clicks the Calculate button on the website, we'll invoke this function.
