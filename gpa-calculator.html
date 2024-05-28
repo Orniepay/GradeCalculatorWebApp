@@ -60,7 +60,7 @@
   <div class="container mt-5 pt-5" id="input-area">
     <div class="row">
       <div class="col-12">
-        <h1>Grade Calculator</h1>
+        <h1>GPA Calculator</h1>
         <br />
       </div>
     </div>
@@ -75,13 +75,13 @@
     <!-- End Select Grade Type Section -->
   
 
-    <form id="grade-form">
+    <form id="gpa-form">
       <div class="row mb-3">
         <div class="col-4">
           <input type="text" class="form-control" placeholder="e.g Course No.1 " />
         </div>
         <div class="col-4">
-          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade"
+          <input type="text" class="form-control" placeholder="Grade"
             min="0" />
         </div>
         <div class="col-4">
@@ -95,7 +95,7 @@
           <input type="text" class="form-control" placeholder="e.g Course No.2" />
         </div>
         <div class="col-4">
-          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade"
+          <input type="text" class="form-control" placeholder="Grade"
             min="0" />
         </div>
         <div class="col-4">
@@ -109,7 +109,7 @@
           <input type="text" class="form-control" placeholder="e.g Course No.3" />
         </div>
         <div class="col-4">
-          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade"
+          <input type="text" class="form-control" placeholder="Grade"
             min="0" />
         </div>
         <div class="col-4">
@@ -123,7 +123,7 @@
           <input type="text" class="form-control" placeholder="" />
         </div>
         <div class="col-4">
-          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade"
+          <input type="text" class="form-control" placeholder="Grade"
             min="0" />
         </div>
         <div class="col-4">
@@ -137,7 +137,7 @@
           <input type="text" class="form-control" placeholder="" />
         </div>
         <div class="col-4">
-          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade"
+          <input type="text" class="form-control" placeholder="Grade"
             min="0" />
         </div>
         <div class="col-4">
@@ -151,7 +151,7 @@
           <input type="text" class="form-control" placeholder="" />
         </div>
         <div class="col-4">
-          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade"
+          <input type="text" class="form-control" placeholder="Grade"
             min="0" />
         </div>
         <div class="col-4">
@@ -178,7 +178,7 @@
 
     <!-- Calculate Button -->
     <div class="d-grid gap-2 col-6 mx-auto">
-      <button id="calculate-button" type="button" class="btn btn-success">
+      <button id="calculate-button-gpa" type="button" class="btn btn-success">
         Calculate
       </button>
     </div>
@@ -189,7 +189,7 @@
       <div class="container mt-5" style="max-width: 80%; margin: auto;">
         <div class="card">
           <div class="card-body">
-            <p id="average-grade" class="mb-0"><strong>AVERAGE GRADE :</strong> <span id="average-grade-value"></span></p>
+            <p id="average-gpa" class="mb-0"><strong>AVERAGE GPA :</strong> <span id="average-gpa-value"></span></p>
           </div>
         </div>
       </div>
@@ -232,7 +232,7 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
-  <script src="script.js"></script>
+  <script src="gpa-calculator.js"></script>
 </body>
 
 </html>

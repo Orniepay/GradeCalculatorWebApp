@@ -167,3 +167,21 @@ body {
 .average-grade-value p {
     color: #28a745; 
 }
+
+#average-gpa {
+    font-size: 24px; 
+    color: #333; 
+    font-weight: bold;
+    font-weight: bold;
+}
+#average-gpa-value {
+    color: green;
+}
+
+#average-gpa-value p {
+    color: #28a745; 
+}
+
+.average-gpa-value p {
+    color: #28a745; 
+}
