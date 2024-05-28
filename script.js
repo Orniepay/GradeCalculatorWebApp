@@ -43,7 +43,7 @@ function calculate_grades()
     //This is what displays the actual grade on the website.
     var average_grade_display = document.getElementById("average-grade");
     //Whenever the user clicks the Calculate button, we'll reset the text and then append the calculated grade.
-    average_grade_display.innerHTML = '<strong>Average Grade: </strong>';
+    average_grade_display.innerHTML = '<strong>AVERAGE GRADE : </strong>';
     var average_grade_value = document.getElementById("average-grade-value");
     average_grade_display.innerHTML += average;
 

@@ -1,26 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPA Calculator</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grade Calculator</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+  <link href="styles.css" rel="stylesheet" />
 </head>
+
 <body>
-    <h1>UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... </h1>
-    <h1>UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... </h1>
-    <h1>UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... </h1>
-    <h1>UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... </h1>
-    <h1>UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... </h1>
-    <h1>UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... </h1>
-    <h1>UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... </h1>
-    <h1>UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... </h1>
-    <h1>UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... </h1>
-    <h1>UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... </h1>
-    <h1>UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... </h1>
-    <h1>UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... </h1>
-    <h1>UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... </h1>
-    <h1>UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... </h1>
-    <h1>UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... </h1>
-    <h1>UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... UNDER CONSTRUCTION... </h1>
+  <!-- Bootstrap HTML Code -->
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand me-auto" href="#">Grade Calculator</a>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Grade Calculator</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link mg-lg-2 active" aria-current="page" href="http://127.0.0.1:5501/grade-calculator.html#">Grade Calculator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mg-lg-2" href="http://127.0.0.1:5501/projected-final-grade-calculator.html">Projected Final Grade Calculator</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link mg-lg-2" href="http://127.0.0.1:5501/gpa-calculator.html">GPA Calculator</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="login-button">Login</a>
+      <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+  <!-- End Navbar-->
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="d-flex align-items-center justify-content-center fs-1"></div>
+  </section>
+  <!-- End Hero Section -->
+
+  <!-- Grade Calculator Section -->
+
+
+  <div class="container mt-5 pt-5" id="input-area">
+    <div class="row">
+      <div class="col-12">
+        <h1>Grade Calculator</h1>
+        <br />
+      </div>
+    </div>
+
+    <!-- Select Grade Type Section -->
+    <div class="alert alert-warning" role="alert" style="text-align: center; padding: 5px 5px;"><small>Please select your grade format!</small></div>
+
+    <div style="text-align: center; margin-bottom: 20px;">
+    <button class="grade-type-button"><strong>Letter Grade</strong></button>
+    <button class="grade-type-button"><strong>Percent Grade</strong></button>
+    </div>
+    <!-- End Select Grade Type Section -->
+  
+
+    <form id="grade-form">
+      <div class="row mb-3">
+        <div class="col-4">
+          <input type="text" class="form-control" placeholder="e.g Course No.1 " />
+        </div>
+        <div class="col-4">
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade"
+            min="0" />
+        </div>
+        <div class="col-4">
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Credits"
+            min="0" />
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-4">
+          <input type="text" class="form-control" placeholder="e.g Course No.2" />
+        </div>
+        <div class="col-4">
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade"
+            min="0" />
+        </div>
+        <div class="col-4">
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Credits"
+            min="0" />
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-4">
+          <input type="text" class="form-control" placeholder="e.g Course No.3" />
+        </div>
+        <div class="col-4">
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade"
+            min="0" />
+        </div>
+        <div class="col-4">
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Credits"
+            min="0" />
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-4">
+          <input type="text" class="form-control" placeholder="" />
+        </div>
+        <div class="col-4">
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade"
+            min="0" />
+        </div>
+        <div class="col-4">
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Credits"
+            min="0" />
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-4">
+          <input type="text" class="form-control" placeholder="" />
+        </div>
+        <div class="col-4">
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade"
+            min="0" />
+        </div>
+        <div class="col-4">
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Credits"
+            min="0" />
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <div class="col-4">
+          <input type="text" class="form-control" placeholder="" />
+        </div>
+        <div class="col-4">
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Grade"
+            min="0" />
+        </div>
+        <div class="col-4">
+          <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control" placeholder="Credits"
+            min="0" />
+        </div>
+      </div>
+    </form>
+
+    <!-- Add Row Button Section -->
+    <br>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button class="btn btn-primary" type="button" id="addRowButton">Add Row</button>
+    </div>
+    <br>
+    <!-- End Add Row Button Section -->
+
+    <!-- Reset Button -->
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button type="button" class="btn btn-secondary" id="reset-button">Reset</button>
+    </div>
+    <br>
+    <!-- End Reset Button-->
+
+    <!-- Calculate Button -->
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button id="calculate-button" type="button" class="btn btn-success">
+        Calculate
+      </button>
+    </div>
+    <!-- End Calculate Button -->
+
+    <!-- Average Grade Calculated Section -->
+    <div style="margin-top: -100px;">
+      <div class="container mt-5" style="max-width: 80%; margin: auto;">
+        <div class="card">
+          <div class="card-body">
+            <p id="average-grade" class="mb-0"><strong>AVERAGE GRADE :</strong> <span id="average-grade-value"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Average Grade Calculated Section -->
+
+  </div>
+  <!-- End Grade Calculator Section -->
+
+  <!-- Add Button Functionality Section -->
+  <script>
+    document.getElementById("addRowButton").addEventListener("click", function() {
+      var form = document.querySelector("#input-area form"); // Select the form
+      var templateRow = form.children[5]; // Reference the template row (fourth row)
+      var newRow = templateRow.cloneNode(true); // Clone the template row
+  
+      // Clear all input fields in the cloned row
+      var inputs = newRow.getElementsByTagName('input');
+      for (var i = 0; i < inputs.length; i++) {
+        inputs[i].value = ''; // Set the value of each input field to an empty string
+      }
+      form.appendChild(newRow); // Append the new, cleared row to the form
+    });
+  </script>
+  <!-- End Add Button Functionality Section -->
+
+  <!-- Reset Button Functionality Section -->
+  <script>
+    document
+      .getElementById("reset-button")
+      .addEventListener("click", function () {
+        var form = document.getElementById("grade-form");
+        form.reset();
+      });
+  </script>
+  <!-- End Reset Button Functionality Section -->
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
