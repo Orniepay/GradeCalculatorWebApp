@@ -19,9 +19,19 @@ function init_server()
     */
     APP.get("/", function(req, res)
     {
-        res.sendFile(PATH.join(__dirname, '/index.html'));
+        res.sendFile(PATH.join(__dirname, '/grade-calculator.html'));
     });
 
+    APP.get("/final-grade-calculator", function(req, res)
+    {
+        res.sendFile(PATH.join(__dirname, '/projected-final-grade-calculator.html'));
+    });
+
+    APP.get("/GPA-calculator", function(req, res)
+    {
+        res.sendFile(PATH.join(__dirname, "/gpa-calculator.html"));
+    });
+    
     APP.listen(PORT, function()
     {
         console.log(`Listening on port: ${PORT}`); 
