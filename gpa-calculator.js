@@ -69,11 +69,26 @@ function calculate_gpa()
     }
 
     //This is what displays the actual grade on the website.
-    var average_gpa_display = document.getElementById("average-gpa");
+    // var average_gpa_display = document.getElementById("average-gpa");
+    var average_gpa_display = document.getElementById("average-gpa-value")
+
     //Whenever the user clicks the Calculate button, we'll reset the text and then append the calculated grade.
-    average_gpa_display.innerHTML = '<strong>AVERAGE GPA : </strong>';
+    // average_gpa_display.innerHTML = '<strong>AVERAGE GPA : </strong>';
     average_gpa_display.innerHTML += Math.round((gpa / credits_taken) * 1000) / 1000;
+
+    var final_gpa = gpa / credits_taken;
+
+    // Set the color based on the average grade value
+    if (final_gpa >= 3.0) {
+        average_grade_display.style.color = "green"; 
+    } else if (final_gpa >= 2.0) {
+        average_grade_display.style.color = "orange"; 
+    } else {
+        average_grade_display.style.color = "red"; 
+    }
 }
+
+
 
 
 document.getElementById("calculate-button-gpa").onclick = function()
