@@ -68,23 +68,25 @@ function calculate_gpa()
         are_credits_empty = true;
     }
 
+    //If 0 credits count toward their GPA, we'll be dividing by 0, so just set GPA to 0, otherwise calculate as normal.
+    console.log(gpa);
+    console.log(credits_taken)
+    var final_gpa = (credits_taken != 0) ? gpa / credits_taken: 0;
+
     //This is what displays the actual grade on the website.
-    // var average_gpa_display = document.getElementById("average-gpa");
-    var average_gpa_display = document.getElementById("average-gpa-value")
+    var average_gpa_display = document.getElementById("average-gpa");
 
     //Whenever the user clicks the Calculate button, we'll reset the text and then append the calculated grade.
-    // average_gpa_display.innerHTML = '<strong>AVERAGE GPA : </strong>';
-    average_gpa_display.innerHTML += Math.round((gpa / credits_taken) * 1000) / 1000;
+    average_gpa_display.innerHTML = '<strong>AVERAGE GPA : </strong>';
+    average_gpa_display.innerHTML += Math.round(final_gpa * 1000) / 1000;
 
-    var final_gpa = gpa / credits_taken;
-
-    // Set the color based on the average grade value
+    // Set the color based on the average GPA value.
     if (final_gpa >= 3.0) {
-        average_grade_display.style.color = "green"; 
+        average_gpa_display.style.color = "green"; 
     } else if (final_gpa >= 2.0) {
-        average_grade_display.style.color = "orange"; 
+        average_gpa_display.style.color = "orange"; 
     } else {
-        average_grade_display.style.color = "red"; 
+        average_gpa_display.style.color = "red"; 
     }
 }
 
