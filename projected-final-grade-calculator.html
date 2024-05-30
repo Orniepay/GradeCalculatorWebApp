@@ -51,9 +51,9 @@
     <!-- End Navbar-->
 
     <!-- Hero Section -->
-    <section class="hero-section">
+    <!-- <section class="hero-section">
         <div class="d-flex align-items-center justify-content-center fs-1"></div>
-    </section>
+    </section> -->
     <!-- End Hero Section -->
 
     <!-- Grade Calculator Section -->
@@ -87,13 +87,15 @@
                 </div>
             </div>
         </form>
+
         <br>
-        <!-- Reset Button -->
+
+        <!-- Reset Button 1-->
         <div class="d-grid gap-2 col-6 mx-auto">
-            <button type="button" class="btn btn-danger" id="reset-button">Reset</button>
+            <button type="button" class="btn btn-danger" id="reset-button1">Reset</button>
         </div>
         <br>
-        <!-- End Reset Button-->
+        <!-- End Reset Button 1-->
 
         <!-- Calculate Button -->
         <div class="d-grid gap-2 col-6 mx-auto">
@@ -102,6 +104,8 @@
             </button>
         </div>
         <!-- End Calculate Button -->
+
+        <br>
 
         <!-- Average Grade Calculated Section -->
         <div style="margin-top: -100px;">
@@ -125,10 +129,11 @@
           <br><br><br>
           <!-------------------------------------------------------------------------------------------------------------------------------->
         
-        <!-- Projected Grade Calculator Bio Section 1-->
+        
+        <!-- Projected Grade Calculator Bio Section 2-->
         <div class="alert alert-warning" role="alert" style="text-align: center; padding: 10px 10px;"><strong>Overall Grade Calculator: Input Current and Final Exam Result</strong></div>
 
-        <form id="grade-form">
+        <form id="grade-form2">
             <div class="row mb-3">
                 <div class="col-4">
                     <input id = "current-average-grade-input" type="text" onkeypress="return only_allow_numbers(event)" class="form-control"
@@ -145,12 +150,12 @@
             </div>
         </form>
         <br>
-        <!-- Reset Button -->
+        <!-- Reset Button 2-->
         <div class="d-grid gap-2 col-6 mx-auto">
-            <button type="button" class="btn btn-danger" id="reset-button">Reset</button>
+            <button type="button" class="btn btn-danger" id="reset-button2">Reset</button>
         </div>
         <br>
-        <!-- End Reset Button-->
+        <!-- End Reset Button 2-->
 
         <!-- Calculate Button -->
         <div class="d-grid gap-2 col-6 mx-auto">
@@ -159,6 +164,8 @@
             </button>
         </div>
         <!-- End Calculate Button -->
+
+        <br>
 
         <!-- Average Grade Calculated Section -->
         <div style="margin-top: -100px;">
@@ -179,24 +186,24 @@
 
     </div>
 
-    <!-- Reset Button Functionality Section -->
+    <!-- Reset Button Functionality Section 1-->
     <script>
         document
-            .getElementById("reset-button")
+            .getElementById("reset-button1")
             .addEventListener("click", function () {
-                var form = document.getElementById("grade-form");
+                var form = document.getElementById("grade-form1");
                 form.reset();
             });
     </script>
     <!-- End Reset Button Functionality Section -->
 
 
-    <!-- Reset Button Functionality Section -->
+    <!-- Reset Button Functionality Section 2-->
     <script>
         document
-            .getElementById("reset-button")
+            .getElementById("reset-button2")
             .addEventListener("click", function () {
-                var form = document.getElementById("grade-form");
+                var form = document.getElementById("grade-form2");
                 form.reset();
             });
     </script>
