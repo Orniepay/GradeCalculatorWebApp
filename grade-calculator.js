@@ -43,7 +43,7 @@ function calculate_grades()
     var average_grade_display = document.getElementById("average-grade");
     //Whenever the user clicks the Calculate button, we'll reset the text and then append the calculated grade.
     average_grade_display.innerHTML = '<strong>AVERAGE GRADE : </strong>';
-    average_grade_display.innerHTML += average;
+    average_grade_display.innerHTML += Math.round(average * 1000) / 1000;
 
     // Set the color based on the average grade value
     if (average >= 80) {
