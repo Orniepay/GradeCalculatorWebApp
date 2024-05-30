@@ -20,6 +20,15 @@ function calculate_target_grade()
     var target_grade_display = document.getElementById("target-grade-display");
     target_grade_display.innerHTML = '<strong>Minimum Final Exam Score Needed : </strong>';
     target_grade_display.innerHTML += (Math.round(calculated_target_grade * 100) / 100) * 100;
+
+      // Projected Grade Color = Blue
+      if (calculate_target_grade >= 80) { // Broke on purpose so it runs else condition (' calculate"d" ')
+        target_grade_display.style.color = "green"; 
+    } else if (calculate_target_grade >= 65) {
+        target_grade_display.style.color = "orange"; 
+    } else {
+        target_grade_display.style.color = "blue"; 
+    }
 }
 
 //Overall Grade Calculator
@@ -43,6 +52,15 @@ function calculate_overall_grade()
     var overall_grade_display = document.getElementById("overall-grade-display");
     overall_grade_display.innerHTML = '<strong>Overall Grade : </strong>';
     overall_grade_display.innerHTML += (Math.round(calculated_overall_grade * 100) / 100) * 100;
+
+     // Set the color based on the average grade value
+     if (calculated_overall_grade >= 80) {
+        overall_grade_display.style.color = "green"; 
+    } else if (calculated_overall_grade >= 65) {
+        overall_grade_display.style.color = "orange"; 
+    } else {
+        overall_grade_display.style.color = "red"; 
+    }
 }
 
 document.getElementById("calculate-button-target-grade").onclick = function()
