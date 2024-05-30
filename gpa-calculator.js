@@ -90,9 +90,6 @@ function calculate_gpa()
     }
 }
 
-
-
-
 document.getElementById("calculate-button-gpa").onclick = function()
 {   
     //When the user clicks the Calculate button on the website, we'll invoke this function.

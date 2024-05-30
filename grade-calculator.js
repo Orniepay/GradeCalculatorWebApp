@@ -72,4 +72,3 @@ function only_allow_numbers(event)
     if(ascii_code > 0x1F && (ascii_code < 0x30 || ascii_code > 0x39)) return false;
     return true;
 }
-

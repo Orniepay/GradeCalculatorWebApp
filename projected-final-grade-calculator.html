@@ -74,30 +74,20 @@
         <form id="grade-form1">
             <div class="row mb-3">
                 <div class="col-4">
-                    <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control"
+                    <input id = "current-grade-input" type="text" onkeypress="return only_allow_numbers(event)" class="form-control"
                         placeholder="Current Grade" min="0" />
                 </div>
                 <div class="col-4">
-                    <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control"
+                    <input id = "target-grade-input" type="text" onkeypress="return only_allow_numbers(event)" class="form-control"
                         placeholder="Projected Target Grade" min="0" />
                 </div>
                 <div class="col-4">
-                    <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control"
+                    <input id = "final-exam-weight" type="text" onkeypress="return only_allow_numbers(event)" class="form-control"
                         placeholder="Final Exam Weight" min="0" />
                 </div>
             </div>
         </form>
-
-        <!-- Add Row Button Section -->
-        <!-- <br>
-        <div class="d-grid gap-2 col-6 mx-auto">
-        <button class="btn btn-primary" type="button" id="addRowButton">Add Row</button>
-        </div>
-        <br> -->
-        <!-- End Add Row Button Section -->
-        
         <br>
-
         <!-- Reset Button -->
         <div class="d-grid gap-2 col-6 mx-auto">
             <button type="button" class="btn btn-danger" id="reset-button">Reset</button>
@@ -107,7 +97,7 @@
 
         <!-- Calculate Button -->
         <div class="d-grid gap-2 col-6 mx-auto">
-            <button id="calculate-button-grade" type="button" class="btn btn-success">
+            <button id="calculate-button-target-grade" type="button" class="btn btn-success">
                 Calculate
             </button>
         </div>
@@ -118,8 +108,8 @@
             <div class="container mt-5" style="max-width: 80%; margin: auto;">
                 <div class="card">
                     <div class="card-body">
-                        <p id="average-grade" class="mb-0"><strong>Minimum Final Exam Score Needed :</strong> <span
-                                id="average-grade-value"></span>
+                        <p id="target-grade-display" class="mb-0"><strong>Minimum Final Exam Score Needed :</strong> <span
+                                id="target-grade-value"></span>
                         </p>
                     </div>
                 </div>
@@ -141,30 +131,20 @@
         <form id="grade-form">
             <div class="row mb-3">
                 <div class="col-4">
-                    <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control"
+                    <input id = "current-average-grade-input" type="text" onkeypress="return only_allow_numbers(event)" class="form-control"
                         placeholder="Current Average Grade" min="0" />
                 </div>
                 <div class="col-4">
-                    <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control"
+                    <input id = "final-exam-grade-input" type="text" onkeypress="return only_allow_numbers(event)" class="form-control"
                         placeholder="Final Exam Grade" min="0" />
                 </div>
                 <div class="col-4">
-                    <input type="text" onkeypress="return only_allow_numbers(event)" class="form-control"
+                    <input id = "final-exam-weight-second" type="text" onkeypress="return only_allow_numbers(event)" class="form-control"
                         placeholder="Final Exam Weight" min="0" />
                 </div>
             </div>
         </form>
-
-        <!-- Add Row Button Section -->
-        <!-- <br>
-        <div class="d-grid gap-2 col-6 mx-auto">
-          <button class="btn btn-primary" type="button" id="addRowButton">Add Row</button>
-        </div>
-        <br> -->
-        <!-- End Add Row Button Section -->
-
         <br>
-
         <!-- Reset Button -->
         <div class="d-grid gap-2 col-6 mx-auto">
             <button type="button" class="btn btn-danger" id="reset-button">Reset</button>
@@ -174,7 +154,7 @@
 
         <!-- Calculate Button -->
         <div class="d-grid gap-2 col-6 mx-auto">
-            <button id="calculate-button-grade" type="button" class="btn btn-success">
+            <button id="calculate-button-overall-grade" type="button" class="btn btn-success">
                 Calculate
             </button>
         </div>
@@ -185,8 +165,8 @@
             <div class="container mt-5" style="max-width: 80%; margin: auto;">
                 <div class="card">
                     <div class="card-body">
-                        <p id="average-grade" class="mb-0"><strong>Overall Grade :</strong> <span
-                                id="average-grade-value"></span>
+                        <p id="overall-grade-display" class="mb-0"><strong>Overall Grade :</strong> <span
+                                id="overall-grade-value"></span>
                         </p>
                     </div>
                 </div>
@@ -199,23 +179,6 @@
 
     </div>
 
-    <!-- Add Button Functionality Section -->
-    <script>
-        document.getElementById("addRowButton").addEventListener("click", function () {
-            var form = document.querySelector("#input-area form"); // Select the form
-            var templateRow = form.children[5]; // Reference the template row (fourth row)
-            var newRow = templateRow.cloneNode(true); // Clone the template row
-
-            // Clear all input fields in the cloned row
-            var inputs = newRow.getElementsByTagName('input');
-            for (var i = 0; i < inputs.length; i++) {
-                inputs[i].value = ''; // Set the value of each input field to an empty string
-            }
-            form.appendChild(newRow); // Append the new, cleared row to the form
-        });
-    </script>
-    <!-- End Add Button Functionality Section -->
-
     <!-- Reset Button Functionality Section -->
     <script>
         document
@@ -227,22 +190,6 @@
     </script>
     <!-- End Reset Button Functionality Section -->
 
-    <!-- Add Button Functionality Section -->
-    <script>
-        document.getElementById("addRowButton").addEventListener("click", function () {
-            var form = document.querySelector("#input-area form"); // Select the form
-            var templateRow = form.children[5]; // Reference the template row (fourth row)
-            var newRow = templateRow.cloneNode(true); // Clone the template row
-
-            // Clear all input fields in the cloned row
-            var inputs = newRow.getElementsByTagName('input');
-            for (var i = 0; i < inputs.length; i++) {
-                inputs[i].value = ''; // Set the value of each input field to an empty string
-            }
-            form.appendChild(newRow); // Append the new, cleared row to the form
-        });
-    </script>
-    <!-- End Add Button Functionality Section -->
 
     <!-- Reset Button Functionality Section -->
     <script>
@@ -261,7 +208,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <script src="grade-calculator.js"></script>
+    <script src="projected-final-grade-calculator.js"></script>
 </body>
 
 </html>
