@@ -31,6 +31,11 @@ function init_server()
     {
         res.sendFile(PATH.join(__dirname, "/gpa-calculator.html"));
     });
+
+    APP.get("/login", function(req, res)
+    {
+        res.sendFile(PATH.join(__dirname, '/login.html'));
+    });
     
     APP.listen(PORT, function()
     {
