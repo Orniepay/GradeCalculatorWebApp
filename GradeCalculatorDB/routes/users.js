@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var bcrypt = require('bcrypt');
 
-let User = require('../models/User');
+var User = require('../models/User');
 
 // Route to display the registration form
 router.get('/register', function(req, res, next) {

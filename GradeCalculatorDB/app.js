@@ -8,11 +8,13 @@ var sassMiddleware = require('node-sass-middleware');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-// Database Connection 
-mongoose.connect('mongodb://localhost:27017/regis',
-{ useNewUrlParser: true, useUnifiedTopology: true },
-(err) => {console.log(err ? err : ' connection true');}
-);
+// MongoDB Database Connection 
+mongoose.connect('mongodb://localhost:27017/tickets', { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('MongoDB connected'))
+    .catch(err => console.log(err));
+
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
 
 var app = express();
 
@@ -33,7 +35,6 @@ app.use(sassMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-const usersRouter = require('./routes/users');
 app.use('/users', usersRouter);
 
 const PORT = process.env.PORT || 3000;

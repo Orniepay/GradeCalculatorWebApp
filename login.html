@@ -15,35 +15,36 @@
 <body>
     <div class="container" id="main">
         <div class="sign-up">
-            <form action="#">
+            <form action="/users/register" method="POST"> <!-- Updated Action URL -->
                 <h1>Create Account</h1>
                 <div class="social-container">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i className="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i className="fab fa-google-plus-g"></i></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i className="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i className="fab fa-twitter"></i></a>
                 </div>
                 <p>or use your email for registration</p>
-                <input type="text" name="txt" placeholder="Name" required="">
+                <input type="text" name="name" placeholder="Name" required> <!-- Added name attribute -->
                 <input type="email" name="email" placeholder="Email" required="">
-                <input type="password" name="pswd" placeholder="Password" required="">
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit">Sign Up</button> <!-- Added submit button -->
             </form>
         </div>
 
         <div class="sign-in">
-            <form action="#">
+            <form action="/users/login" method="POST"> <!-- Updated Action URL -->
                 <h1>Sign in</h1>
                 <div class="social-container">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i className="fab fa-facebook-f"></i></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i className="fab fa-google-plus-g"></i></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i className="fab fa-github"></i></a>
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i className="fab fa-twitter"></i></a>
                 </div>
                 <p>or use your account</p>
                 <input type="email" name="email" placeholder="Email" required="">
                 <input type="password" name="password" placeholder="Password" required="">
-                <a href="#">Forgot your Password?</a>
-                <button>Sign In</button>
+                <a href="https://www.youtube.com/watch?v=ikCa3Lr9pKU">Forgot your Password?</a>
+                <button type="submit">Sign In</button> <!-- Added submit button -->
             </form>
         </div>
 
