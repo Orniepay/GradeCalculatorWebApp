@@ -16,7 +16,7 @@ const Login = () => {
             .then(result => {
                 if (result.data.message === "Login Successful!") {
                     toast.success('Login Successful. Welcome!');
-                    navigate('/home');
+                    navigate('/dashboard');
                 } else {
                     toast.error(result.data);
                 }
