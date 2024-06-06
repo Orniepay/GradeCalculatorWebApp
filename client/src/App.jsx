@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Login.css'; // Check this is the correct path
 import Login from './Login';
 import Signup from './Signup';
-
+import { Toaster } from 'react-hot-toast'
 
 const App = () => {
   const [isRightPanelActive, setIsRightPanelActive] = useState(false);
@@ -16,6 +16,8 @@ const App = () => {
   };
 
   return (
+    <>
+    <Toaster position='bottom-right' toastOption={{duration: 2000}} />
     <div className={`container ${isRightPanelActive ? 'right-panel-active' : ''}`} id="main">
       <Signup />
       <Login />
@@ -34,8 +36,8 @@ const App = () => {
         </div>
       </div>
     </div>
+    </> 
   );
 };
 
 export default App;
-

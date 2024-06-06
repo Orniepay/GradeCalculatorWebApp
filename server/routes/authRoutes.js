@@ -6,7 +6,7 @@ const { test, registerUser, loginUser } = require('../controllers/authController
 // middleware
 router.use(
   cors({
-    credentials: true,
+    credentials: true, // Added to allow sending cookies
     origin: 'http://localhost:5173',
   })
 );
@@ -14,5 +14,6 @@ router.use(
 router.get('/', test);
 router.post('/register', registerUser);
 router.post('/login', loginUser); // Added login route
+
 
 module.exports = router;
