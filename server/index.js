@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const GradeCalculatorLogin = require('./models/gradecalculator-login');
+const authRoutes = require('./routes/authRoutes'); // Ensure routes are imported
 
 const app = express();
 app.use(express.json());
@@ -12,30 +12,10 @@ mongoose.connect('mongodb://127.0.0.1:27017/gradecalculator-login', {
   useUnifiedTopology: true
 });
 
-app.post('/login', (req, res) => {
-  const { email, password } = req.body;
-  GradeCalculatorLogin.findOne({ email: email })
-    .then(user => {
-      if(user) {
-        if(user.password === password){
-          res.json("Successful!");
-        } else {
-          res.json("Incorrect Password! Try Again.");
-        }
-      } else {
-        res.json("No Record Existed");
-      }
-    })
-    .catch(err => res.status(500).json(err));
-});
+// Register routes here after the middleware setup
+app.use('/api', authRoutes);
 
-app.post('/register', (req, res) => {
-  GradeCalculatorLogin.create(req.body)
-    .then(user => res.json(user))
-    .catch(err => res.status(500).json(err));
+const port = 3001;
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
-
-app.listen(3001, () => {
-  console.log('Server is running on port 3001');
-});
-
