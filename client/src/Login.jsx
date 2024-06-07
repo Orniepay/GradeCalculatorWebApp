@@ -11,21 +11,23 @@ const Login = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:3001/api/login', { email, password }, { withCredentials: true }) // Added withCredentials option
-
-            .then(result => {
-                if (result.data.message === "Login Successful!") {
-                    toast.success('Login Successful. Welcome!');
-                    navigate('/dashboard');
-                } else {
-                    toast.error(result.data);
-                }
-            })
-            .catch(err => {
-                console.log(err);
-                toast.error('An error occurred. Please try again.');
-            });
-    };
+        axios.post('http://localhost:3001/api/login', { email, password }, { withCredentials: true })
+          .then(result => {
+            if (result.data.message === "Login Successful!") {
+              toast.success('Login Successful. Welcome!');
+              setTimeout(() => {
+                window.location.href = 'http://localhost:8080'; // Navigate to the grade calculator page after 3 seconds
+              }, 1000); // 1-second delay
+            } else {
+              toast.error(result.data);
+            }
+          })
+          .catch(err => {
+            console.log(err);
+            toast.error('Incorrect Password! Try Again.');
+            // toast.error('An error occurred. Please try again.');
+          });
+      };
 
     return (
         <div className="sign-in">

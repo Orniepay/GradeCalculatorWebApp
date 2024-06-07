@@ -18,14 +18,16 @@ const Signup = () => {
                     toast.error(result.data.error);
                 } else {
                     toast.success('Registration Successful. Welcome!');
-                    navigate('/login');
-                }
-            })
-            .catch(error => {
-                console.log(error);
-                toast.error('An error occurred. Please try again.');
-            });
-    };
+                    setTimeout(() => {
+                      window.location.href = 'http://localhost:5173/login'; // Navigate to the login page after 3 seconds
+                    }, 1000); // 1-second delay
+                  }
+                })
+                .catch(error => {
+                  console.log(error);
+                  toast.error('An error occurred. Please try again.');
+                });
+            };
 
     return (
         <div className="sign-up">
@@ -33,8 +35,8 @@ const Signup = () => {
                 <h1>Create Account</h1>
                 <div className="social-container">
                   <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i className="fab fa-facebook-f"></i></a>
-                  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i className="fab fa-google-plus-g"></i></a>
-                  <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i className="fab fa-github"></i></a>
+                  <a href="https://www.youtube.com/watch?v=ikCa3Lr9pKU"><i className="fab fa-google-plus-g"></i></a>
+                  <a href="https://www.youtube.com/watch?v=ikCa3Lr9pKU"><i className="fab fa-github"></i></a>
                   <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i className="fab fa-twitter"></i></a>
                 </div>
                 <p>or use your email for registration</p>
