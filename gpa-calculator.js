@@ -37,6 +37,24 @@ function calculate_gpa()
             return;
         }
 
+        //If the grades are a number (percentage) we'll convert them to a letter then do the GPA conversion.
+        if(!isNaN(grade))
+        {
+            if(grade >= 96) grade = "A+";
+            else if(grade >= 93) grade = "A";
+            else if(grade >= 90) grade = "A-";
+            else if(grade >= 87) grade = "B+";
+            else if(grade >= 84) grade = "B";
+            else if(grade >= 81) grade = "B-";
+            else if(grade >= 78) grade = "C+";
+            else if(grade >= 75) grade = "C";
+            else if(grade >= 72) grade = "C-";
+            else if(grade >= 69) grade = "D+";
+            else if(grade >= 66) grade = "D";
+            else if(grade >= 63) grade = "D-";
+            else grade = "F";
+        }
+
         //Actual GPA calculation.
         var gpa_mappings = 
         {
@@ -69,8 +87,6 @@ function calculate_gpa()
     }
 
     //If 0 credits count toward their GPA, we'll be dividing by 0, so just set GPA to 0, otherwise calculate as normal.
-    console.log(gpa);
-    console.log(credits_taken)
     var final_gpa = (credits_taken != 0) ? gpa / credits_taken: 0;
 
     //This is what displays the actual grade on the website.
