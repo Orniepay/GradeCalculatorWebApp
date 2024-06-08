@@ -9,7 +9,7 @@ const GradeCalculatorLogin = require('./models/gradecalculator-login');
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: 'http://localhost:8080', // Replace with your frontend origin
+  origin: 'http://localhost:5173' , // Replace with your frontend origin
   credentials: true // Allow sending cookies
 }));
 app.use(cookieParser());
