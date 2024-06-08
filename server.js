@@ -1,5 +1,6 @@
 function init_server() {
     console.log("the server is running gals!");
+    console.log("chunky"); 
 
     // Import the Express JS module. We're going to use Express JS framework for the back-end.
     const EXPRESS = require("express");
