@@ -53,10 +53,11 @@ function calculate_overall_grade()
     overall_grade_display.innerHTML = '<strong>Overall Grade : </strong>';
     overall_grade_display.innerHTML += (Math.round(calculated_overall_grade * 100) / 100) * 100;
 
-     // Set the color based on the average grade value
-     if (calculated_overall_grade >= 80) {
+    // Set the color based on the overall grade value
+    var percentage_grade = calculated_overall_grade * 100; // Convert to percentage
+    if (percentage_grade >= 80) {
         overall_grade_display.style.color = "green"; 
-    } else if (calculated_overall_grade >= 65) {
+    } else if (percentage_grade >= 65) {
         overall_grade_display.style.color = "orange"; 
     } else {
         overall_grade_display.style.color = "red"; 
