@@ -10,4 +10,4 @@
 
 https://github.com/Orniepay/GradeCalculatorWebApp/assets/137340345/752a757a-c485-4d79-8846-2c5a6d56a220
 
-https://github.com/Orniepay/GradeCalculatorWebApp/assets/137340345/d821c048-82f8-445f-95c4-8ac49d334f2b
+https://github.com/Orniepay/GradeCalculatorWebApp/assets/137340345/ade64c66-4082-4f31-ad51-c690639c32fe
